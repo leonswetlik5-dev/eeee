@@ -852,13 +852,7 @@ local function createHighlight(player)
 	}):Play()
 
 	highlights[player] = highlight
-end
-
-local function removeHighlight(player)
-	if highlights[player] then
-		TweenService:Create(highlights[player], TweenInfo.new(0.2), {
-			FillTransparency = 1,
-			OutlineTransparency = 1
+end	OutlineTransparency = 1
 		}):Play()
 
 		task.delay(0.2, function()
@@ -1129,3 +1123,9 @@ tracerFrame.InputBegan:Connect(function(input)
 		updateTracerToggle()
 	end
 end)
+
+local function removeHighlight(player)
+	if highlights[player] then
+		TweenService:Create(highlights[player], TweenInfo.new(0.2), {
+			FillTransparency = 1,
+		
